@@ -1,17 +1,19 @@
 # 🐍 Einstieg in Python – Artikelverwaltung
 
-Konsolenprogramm zur Artikelerfassung und Rechnungsstellung – entwickelt im Rahmen der Berufsschulausbildung zur Fachinformatikerin.
+> Modulares Konsolenprogramm zur Artikelerfassung und Rechnungsstellung – entwickelt im Rahmen der Berufsschulausbildung zur Fachinformatikerin Anwendungsentwicklung.
 
-## Projektstruktur
+## 📋 Projektbeschreibung
 
-| Datei | Beschreibung |
-|---|---|
-| `artikel_funktions.py` | Funktionsmodul: Eingabe, Preisliste, Berechnung |
-| `artikel_hauptprogram.py` | Hauptprogramm: Schleife, Ausgabe, Gesamtrechnung |
+Dieses Projekt besteht aus zwei Dateien und zeigt den Einsatz von **modularer Programmierung** in Python: Funktionen werden in einem separaten Modul definiert und vom Hauptprogramm importiert. Der Nutzer gibt Artikelnummern und Mengen ein; das Programm berechnet die Rechnung mit Netto, MwSt und Brutto – inklusive historischer DM-Umrechnung.
 
-## Funktionsumfang
+## 📁 Projektstruktur
 
-Der Nutzer gibt Artikelnummern und Mengen ein. Das Programm berechnet für jeden Artikel den Positionspreis und gibt am Ende eine vollständige Rechnung mit Netto, MwSt und Brutto aus.
+| Datei | Rolle | Beschreibung |
+|---|---|---|
+| `artikel_funktions.py` | **Modul** | Enthält alle Hilfsfunktionen: Eingabevalidierung, Preisliste, Berechnung |
+| `artikel_hauptprogram.py` | **Hauptprogramm** | Importiert das Modul, steuert die Hauptschleife und Ausgabe |
+
+## 🚀 Funktionsumfang
 
 ### Verfügbare Artikel
 | Artikelnummer | Stückpreis |
@@ -23,23 +25,32 @@ Der Nutzer gibt Artikelnummern und Mengen ein. Das Programm berechnet für jeden
 | 125 | 12,95 € |
 
 ### Rechnungsformel
-- Netto = Summe aller Positionspreise
-- MwSt = Netto × 19%
-- Brutto = Netto × 1,19
-- DM = Brutto × 1,95583 (historischer Umrechnungskurs)
+| Position | Berechnung |
+|---|---|
+| Netto | Summe aller Positionspreise |
+| MwSt | Netto × 19% |
+| Brutto | Netto × 1,19 |
+| DM-Betrag | Brutto × 1,95583 (historischer Kurs) |
 
-## Verwendete Python-Konzepte
-- Eigene Funktionen mit Docstrings (`def`, `return`)
-- Modulimport (`import artikel_funktions as a`)
-- `while`-Schleife (Hauptschleife + Eingabevalidierung)
-- `try` / `except` (Fehlerbehandlung)
-- Dictionary (Preisliste)
-- f-Strings (formatierte Ausgabe)
+## 🧠 Verwendete Python-Konzepte
 
-## Ausführen
+| Konzept | Anwendung im Projekt |
+|---|---|
+| Eigene Funktionen | `def` mit Parametern, `return`, Docstrings |
+| Modulimport | `import artikel_funktions as a` |
+| `while`-Schleife | Hauptschleife + Eingabevalidierung |
+| `try` / `except` | Fehlerbehandlung bei Nutzereingaben |
+| Dictionary | Preisliste als Key-Value-Struktur |
+| f-Strings | Formatierte, ausgerichtete Rechnungsausgabe |
+
+## ▶️ Ausführen
 
 ```bash
 python artikel_hauptprogram.py
 ```
 
-> Voraussetzungen: Python 3.x – beide Dateien müssen im selben Ordner liegen
+> **Voraussetzungen:** Python 3.x · Beide Dateien müssen im selben Ordner liegen
+
+## 👩‍💻 Über die Entwicklerin
+
+Dieses Projekt demonstriert mein Verständnis von **modularer Programmierung**: Code sinnvoll aufteilen, Funktionen mit Docstrings dokumentieren und Module importieren – eine wichtige Grundlage für größere Softwareprojekte.
